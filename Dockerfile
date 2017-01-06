@@ -1,3 +1,7 @@
+#
+# docker run --rm petervaczi/antlr <antlr-options>
+#
+
 FROM anapsix/alpine-java:8
 MAINTAINER Peter Vaczi <peter.vaczi@gmail.com>
 
