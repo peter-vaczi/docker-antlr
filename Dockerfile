@@ -1,5 +1,11 @@
 #
-# docker run --rm --net=none --user $(id -u):$(id -g) -v $(pwd):/work petervaczi/antlr <antlr-options>
+# setup:
+#  docker create --name antlr petervaczi/antlr:4.6
+#  sudo docker cp antlr:docker-antlr /usr/local/bin/
+#  docker rm antlr
+#
+# use:
+#  docker-antlr <antlr-options>
 #
 
 FROM anapsix/alpine-java:8
@@ -11,8 +17,6 @@ ENV CLASSPATH .:/antlr-${ANTLR_VERSION}-complete.jar:$CLASSPATH
 ADD http://www.antlr.org/download/antlr-${ANTLR_VERSION}-complete.jar /
 RUN chmod +r /antlr-${ANTLR_VERSION}-complete.jar
 
-COPY antlr /usr/local/bin/antlr
+COPY rootfs/ /
 
-VOLUME /work
-
-ENTRYPOINT ["/usr/local/bin/antlr"]
+ENTRYPOINT ["/usr/bin/antlr"]
