@@ -9,7 +9,7 @@ www.antlr.org
 Use the docker-antlr helper script to fire up the container conveniently. docker-antlr accepts the very same command line options as antlr itself. it bind-mounts all the necessary directories (directories of your input and output files) and calls antlr within the container. You can get docker-antlr form the git repository or copy it directly from the container's root directory.
 
 ```
-docker create --name antlr petervaczi/antlr:4.6
+docker create --name antlr petervaczi/antlr
 sudo docker cp antlr:docker-antlr /usr/local/bin/
 docker rm antlr
 ```

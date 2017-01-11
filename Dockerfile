@@ -1,6 +1,6 @@
 #
 # setup:
-#  docker create --name antlr petervaczi/antlr:4.6
+#  docker create --name antlr petervaczi/antlr
 #  sudo docker cp antlr:docker-antlr /usr/local/bin/
 #  docker rm antlr
 #

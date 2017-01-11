@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-image_tag=4.6
+image_tag=latest
 
 output_dir=$(pwd)
 lib_dir=$(pwd)
